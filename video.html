@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Subtitles with Tooltips</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="videoContainer"> 
+        <h1>SMART SUBTITLES</h1>
+        <div class="video-container">
+            <video id="myVideo" controls>
+                <source id="videoSource" type="video/mp4">
+                <track id="subtitleTrack" label="English" kind="subtitles" srclang="en" default>
+                Your browser does not support the video tag.
+            </video>
+            <div id="subtitleDisplay"></div> 
+        </div>
+        <button id="uploadNewButton" class="upload-btn">Upload New Video</button>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        
+        document.getElementById('uploadNewButton').addEventListener('click', () => {
+            window.location.href = 'upload.html'; 
+        });
+    </script>
+</body>
+</html>
+
+
